@@ -2,6 +2,6 @@ package gomath
 
 import "fmt"
 
-func bloo() {
+func Bloo() {
 	fmt.Println("Go Math")
 }
