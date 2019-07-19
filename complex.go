@@ -62,9 +62,13 @@ func (c Complex128) SquareRoot() Complex128 {
 	return c.NthRoot(2)
 }
 
+func (c Complex128) Log() Complex128 {
+	return Complex128{real: math.Log(c.Magnitude()), imaginary: c.Phase()}
+}
+
 // TODO (tan)
 // TODO (sin)
-// TODO (log)
+
 // TODO (rect)
 // TODO (pow)
 // TODO (polar)
