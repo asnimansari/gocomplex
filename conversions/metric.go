@@ -5,10 +5,10 @@ const METER_TO_FEET_RATION = 0.3048
 
 type Meter float64
 
-func (n float64) Centimeter() float64 {
+func (n Meter) Centimeter() Meter {
 	return n * 100.0
 }
 
-func (n float64) FeeT() float64 {
+func (n Meter) Feet() Meter {
 	return n * FEET_TO_METER_RATION
 }
