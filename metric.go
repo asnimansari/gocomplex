@@ -1,4 +1,4 @@
-package conversions
+package gomath
 
 const FEET_TO_METER_RATION = 3.28084
 const METER_TO_FEET_RATION = 0.3048
