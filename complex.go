@@ -15,7 +15,6 @@ func (c Complex128) Absolute() float64 {
 	return math.Hypot(c.real, c.imaginary)
 }
 
-
 func (c Complex128) GetReal() float64 {
 	return c.real
 }
