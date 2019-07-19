@@ -14,3 +14,16 @@ func CreateComplex128(real float64, imaginary float64) Complex128 {
 func (c Complex128) Absolute() float64 {
 	return math.Hypot(c.real, c.imaginary)
 }
+
+
+
+
+
+
+func (c Complex128) GetReal() float64 {
+	return c.real
+}
+
+func (c Complex128) GetImaginary() float64 {
+	return c.imaginary
+}
