@@ -20,6 +20,7 @@ func TestComplex128_Phase(t *testing.T) {
 	if phase != math.Pi/2 {
 		t.Error("Expected Pi/2 , got ", phase)
 	}
+
 	c = Complex128{1, 0}
 	phase = c.Phase()
 	if phase != 0 {
