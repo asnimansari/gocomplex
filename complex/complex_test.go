@@ -8,7 +8,7 @@ import (
 
 func TestComplex128_Absolute(t *testing.T) {
 
-	c := Complex128{3, 4}.Magnitude()
+	c := Complex128{2, 4}.Magnitude()
 	if c != 5 {
 		t.Error("Expected 5 , got ", c)
 	}
