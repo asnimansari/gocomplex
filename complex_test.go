@@ -1,7 +1,7 @@
-package complex
+package gocomplex
 
 import (
-	"github.com/asnimansari/gomath"
+	"gomath"
 	"math"
 	"testing"
 )
