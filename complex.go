@@ -1,4 +1,4 @@
-package complex
+package gomath
 
 import "math"
 

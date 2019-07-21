@@ -1,7 +1,7 @@
-package complex
+package gomath
 
 import (
-	"github.com/asnimansari/gomath"
+
 	"math"
 	"testing"
 )
@@ -71,7 +71,7 @@ func TestPolarToArgand(t *testing.T) {
 
 	complexCreatedFromMagnitudeAndPhase := PolarToArgand(refernceMagnitude, referencePhase)
 
-	if !gomath.AlmostEqual(complexCreatedFromMagnitudeAndPhase.real, referenceComplex.real) || !gomath.AlmostEqual(complexCreatedFromMagnitudeAndPhase.imaginary, referenceComplex.imaginary) {
+	if !AlmostEqual(complexCreatedFromMagnitudeAndPhase.real, referenceComplex.real) || !AlmostEqual(complexCreatedFromMagnitudeAndPhase.imaginary, referenceComplex.imaginary) {
 		t.Errorf("Expected (%v) , got (%v) ", referenceComplex, complexCreatedFromMagnitudeAndPhase)
 	}
 }
@@ -81,7 +81,7 @@ func TestComplex128_NthPower(t *testing.T) {
 	originalComplex := Complex128{1, 1}
 	expectedSquaredValue := Complex128{0, 2}
 	squaredValue := originalComplex.NthPower(2)
-	if !gomath.AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !gomath.AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
+	if !AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
 		t.Errorf("Expected (%v) , got (%v) ", expectedSquaredValue, squaredValue)
 
 	}
@@ -89,7 +89,7 @@ func TestComplex128_NthPower(t *testing.T) {
 	originalComplex = Complex128{3, 5}
 	expectedSquaredValue = Complex128{-16, 30}
 	squaredValue = originalComplex.NthPower(2)
-	if !gomath.AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !gomath.AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
+	if !AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
 		t.Errorf("Expected (%v) , got (%v) ", expectedSquaredValue, squaredValue)
 
 	}
@@ -100,7 +100,7 @@ func TestComplex128_NthRoot(t *testing.T) {
 	originalComplex := Complex128{0, 2}
 	expectedSquaredValue := Complex128{1, 1}
 	squaredValue := originalComplex.NthRoot(2)
-	if !gomath.AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !gomath.AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
+	if !AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
 		t.Errorf("Expected (%v) , got (%v) ", expectedSquaredValue, squaredValue)
 
 	}
@@ -108,7 +108,7 @@ func TestComplex128_NthRoot(t *testing.T) {
 	originalComplex = Complex128{-16, 30}
 	expectedSquaredValue = Complex128{5, -3}
 	squaredValue = originalComplex.NthRoot(2)
-	if !gomath.AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !gomath.AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
+	if !AlmostEqual(squaredValue.real, expectedSquaredValue.real) || !AlmostEqual(squaredValue.imaginary, expectedSquaredValue.imaginary) {
 		t.Errorf("Expected (%v) , got (%v) ", expectedSquaredValue, squaredValue)
 
 	}
