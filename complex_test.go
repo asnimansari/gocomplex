@@ -1,7 +1,6 @@
 package gomath
 
 import (
-
 	"math"
 	"testing"
 )
@@ -112,4 +111,14 @@ func TestComplex128_NthRoot(t *testing.T) {
 		t.Errorf("Expected (%v) , got (%v) ", expectedSquaredValue, squaredValue)
 
 	}
+}
+
+func TestComplex128_Rotate(t *testing.T) {
+	computedRotatedComplexNumber := Complex128{1, 0}.Rotate(math.Pi / 2)
+	expectedComplexNumber := Complex128{0, 1}
+
+	if !IsComplexNumberEqual(computedRotatedComplexNumber, expectedComplexNumber) {
+		t.Errorf("Expected (%v) , got (%v) ", expectedComplexNumber, computedRotatedComplexNumber)
+	}
+
 }

@@ -90,8 +90,18 @@ func (c1 Complex128) Compare(c2 Complex128) bool {
 
 }
 
+// Returns an array of two elements where 1st element is the real part and 2nd the imaginary part
 func (c Complex128) Vector() []float64 {
 	return []float64{c.real, c.imaginary}
+}
+
+// Rotates a Complex Number by angle theta in radians
+func (c Complex128) Rotate(angleInRadians float64) Complex128 {
+	magnitude, phase := c.Polar()
+	newPhase := phase + angleInRadians
+	print(newPhase)
+	return PolarToArgand(magnitude, newPhase)
+
 }
 
 // TODO (tan)
