@@ -85,8 +85,8 @@ func (c Complex128) Negate() Complex128 {
 }
 
 // Checks if both complex numbers are equal
-func (c1 Complex128) Compare(c2 Complex128) bool {
-	return c1.real == c2.real && c1.imaginary == c2.imaginary
+func (c Complex128) Compare(c2 Complex128) bool {
+	return c.real == c2.real && c.imaginary == c2.imaginary
 
 }
 
@@ -102,6 +102,21 @@ func (c Complex128) Rotate(angleInRadians float64) Complex128 {
 	print(newPhase)
 	return PolarToArgand(magnitude, newPhase)
 
+}
+
+// Translates a complex number with another Complex number
+func (c Complex128) TranslateWithComplexNumber(c1 Complex128) Complex128{
+	return Complex128{c.real+c1.real, c.imaginary+c1.imaginary}
+}
+
+// Translates a complex number with a Vector
+func (c Complex128) TranlateWithVector(v [2]float64) Complex128{
+	return Complex128{c.real+v[0], c.imaginary+v[1]}
+}
+
+// Scales a complex number with mentioned scaling factor
+func (c Complex128) Scale(scalingFactor float64) Complex128{
+	return Complex128{scalingFactor*c.real, scalingFactor * c.imaginary}
 }
 
 // TODO (tan)
