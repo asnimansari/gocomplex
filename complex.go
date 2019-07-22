@@ -1,4 +1,4 @@
-package gomath
+package gocomplex
 
 import "math"
 
@@ -99,7 +99,7 @@ func (c Complex128) Vector() []float64 {
 func (c Complex128) Rotate(angleInRadians float64) Complex128 {
 	magnitude, phase := c.Polar()
 	newPhase := phase + angleInRadians
-	print(newPhase)
+
 	return PolarToArgand(magnitude, newPhase)
 
 }
