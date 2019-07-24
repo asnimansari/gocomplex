@@ -9,3 +9,4 @@ notifications:
 
 script:
   - go test -v -race ./...
+  - golint
