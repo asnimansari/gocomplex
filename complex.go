@@ -107,18 +107,29 @@ func (c Complex128) Rotate(angleInRadians float64) Complex128 {
 }
 
 // TranslateWithComplexNumber Translates a complex number with another Complex number
-func (c Complex128) TranslateWithComplexNumber(c1 Complex128) Complex128{
-	return Complex128{c.real+c1.real, c.imaginary+c1.imaginary}
+func (c Complex128) TranslateWithComplexNumber(c1 Complex128) Complex128 {
+	return Complex128{c.real + c1.real, c.imaginary + c1.imaginary}
 }
 
 // TranslateeWithVector Translates a complex number with a Vector
-func (c Complex128) TranslateeWithVector(v [2]float64) Complex128{
-	return Complex128{c.real+v[0], c.imaginary+v[1]}
+func (c Complex128) TranslateeWithVector(v [2]float64) Complex128 {
+	return Complex128{c.real + v[0], c.imaginary + v[1]}
 }
 
 // Scale Scales a complex number with mentioned scaling factor
-func (c Complex128) Scale(scalingFactor float64) Complex128{
-	return Complex128{scalingFactor*c.real, scalingFactor * c.imaginary}
+func (c Complex128) Scale(scalingFactor float64) Complex128 {
+	return Complex128{scalingFactor * c.real, scalingFactor * c.imaginary}
+}
+
+// MultiplyBy multiplies the original complex number with the complex number passed as argument
+func (c Complex128) MultiplyBy(c1 Complex128) Complex128 {
+	return Complex128{real: c.real*c1.real - c.imaginary*c1.imaginary, imaginary: c.real*c1.imaginary + c.imaginary*c1.real}
+
+}
+
+// Multiply multiplies the two complex numbers passed as argument
+func Multiply(c, c1 Complex128) Complex128 {
+	return Complex128{real: c.real*c1.real - c.imaginary*c1.imaginary, imaginary: c.real*c1.imaginary + c.imaginary*c1.real}
 }
 
 // TODO (tan)

@@ -122,3 +122,29 @@ func TestComplex128_Rotate(t *testing.T) {
 	}
 
 }
+
+func TestComplex128_MultiplyBy(t *testing.T) {
+	c := Complex128{5, 3}
+	c1 := Complex128{6, 2}
+
+	exptectedOutput := Complex128{24, 28}
+
+	actualOutput := c.MultiplyBy(c1)
+
+	if !IsComplexNumberEqual(exptectedOutput, actualOutput) {
+		t.Errorf("Expected (%v) , got (%v) ", exptectedOutput, actualOutput)
+	}
+}
+
+func TestMultiply(t *testing.T) {
+	c := Complex128{5, 3}
+	c1 := Complex128{6, 2}
+
+	exptectedOutput := Complex128{24, 28}
+
+	actualOutput := Multiply(c, c1)
+
+	if !IsComplexNumberEqual(exptectedOutput, actualOutput) {
+		t.Errorf("Expected (%v) , got (%v) ", exptectedOutput, actualOutput)
+	}
+}
