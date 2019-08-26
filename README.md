@@ -7,7 +7,7 @@
 GoComplex contains various mathematical operators on Complex Numbers. Unlike from the original complex number implementation in golang, we used a struct to represent Complex128 with float64 for real as well as imaginary part
 
 
-Couple of things we still haven't implimented and we want to impliment are  
+Couple of pending operations to implement are...
 
 
 - [ ]  tan
@@ -17,4 +17,3 @@ Couple of things we still haven't implimented and we want to impliment are
 - [ ]  isinf
 - [ ]  exp
 
-operations.
